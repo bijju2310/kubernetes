@@ -1,16 +1,16 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx
+  name: nodeapp
   labels:
-    name: myapp
+    name: nodeapp
 spec:
   containers:
   - name: nginx
-    image: nginx:latest
+    image: kammana/nodeapp:v1
     resources:
       limits:
         memory: "128Mi"
         cpu: "500m"
     ports:
-      - containerPort: 80
+      - containerPort: 8080
